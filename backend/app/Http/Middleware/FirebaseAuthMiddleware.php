@@ -28,7 +28,7 @@ class FirebaseAuthMiddleware
         $idTokenString = substr($authorization, 7);
 
         try {
-            $verifiedIdToken = $this->auth->verifyIdToken($idTokenString);
+            $verifiedIdToken = $this->auth->verifyIdToken($idTokenString, true);
         } catch (InvalidToken $e) {
             // O token é inválido
             return response()->json(['error' => 'Invalid token'], 401);
