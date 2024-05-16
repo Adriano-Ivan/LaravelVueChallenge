@@ -1,5 +1,5 @@
 <template>
-  <h1>Crate an account</h1>
+  <h1>Sign In</h1>
   <p>
     <input type="text" placeholder="Email" v-model="email" />
   </p>
